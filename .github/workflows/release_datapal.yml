@@ -23,9 +23,9 @@ jobs:
       with:
         java-version: '11'
     - name: Blah
-      run: dir
+      run: cd vaadin-crm
     - name: sd
-      run: echo ${{ github.workspace }}
+      run: dir
     - name: Build with Maven
       run: mvn clean install
 
@@ -35,5 +35,5 @@ jobs:
         app-name: Datapal
         slot-name: Production
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B6931C5635C14F7EB57A06FDFB67C3CC }}
-        package: ${{ github.workspace }}/target/*.jar
+        package: ${{ github.workspace }}/vaadin-crm/target/*.jar
 
