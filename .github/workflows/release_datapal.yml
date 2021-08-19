@@ -22,12 +22,9 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: '11'
-    - name: Blah
-      run: cd vaadin-crm
-    - name: sd
-      run: dir
+
     - name: Build with Maven
-      run: cd vaadin-crm & mvn clean install
+      run: mvn clean install
 
     - name: Run Azure webapp deploy action using publish profile credentials
       uses: azure/webapps-deploy@v2
